@@ -101,7 +101,31 @@ class poly:
         return result 
 
         
+    def addterm (self,cf,exp): 
+        if exp < len(self.coeffs):
+            self.coeffs[exp] = self.coeffs[exp] + cf
+        else: 
+            
+            index = len(self.coeffs)
 
+            
+            while index < exp + 1 : 
+                self.coeffs.append(0)
+                index +=1
+
+            self.coeffs[exp] = cf
+    
+    def removeterm(self,exp):
+        if exp >= len(self.coeffs) or exp < 0 : 
+            return 
+        elif exp == len(self.coeffs)-1
+            self.coeffs.remove(exp)
+        else:
+            self.coeffs[exp] =0 
+        
+            
+
+        
 
 
 

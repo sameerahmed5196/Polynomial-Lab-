@@ -24,3 +24,23 @@ print(P.evaluate(2))
 
 
 
+
+P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+print(P)
+P.addterm(5,5)
+print(P)
+P.addterm(5, 20)
+print(P)
+
+
+P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P.addterm(9,0)
+print(P)
+
+
+P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P.removeterm(6)
+print (P)
+
+
+print(P)
