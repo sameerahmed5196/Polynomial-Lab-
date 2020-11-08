@@ -4,25 +4,40 @@ class poly:
 
         self.termpairs = termpairs
         self.exponets = []
-        self.coeffs = []
+        self.coeffs =self.getcoefflistfromtermlist(self.termpairs)
 
-        for x in self.termpairs :
+        
+    
 
-            self.coeffs.append(x[0]) 
+        
 
-        for x in self.termpairs :
 
-            self.exponets.append(x[1])
+        
 
-        size  = (max(self.exponets) + 1) - len(self.coeffs)
-
-        for x in range(size):
-            self.coeffs.append(0)
+        print("coeffs list is ")
         print (self.coeffs)
 
-        #for x in self.exponets:
             
         
+    def getmaxexponent(self,*termpairs): 
+        exponets = [] 
+        for x in self.termpairs :
+            exponets.append(x[1])
+
+        return max (exponets)
+    
+    def getcoefflistfromtermlist(self,*termpairs): 
+        size = self.getmaxexponent(termpairs) + 1
+        coeffs = [] 
+
+        for x in range(size):
+            coeffs.append(self.findcoeffdegree(x))
+
+        return coeffs
+        
+
+        
+
 
     def __str__(self):
         return str (self.termpairs)+ str(self.coeffs)
@@ -53,6 +68,13 @@ class poly:
     
     def subcoeffs (self,coeff1,coeff2): 
         return (coeff1 - coeff2)
+    
+    def findcoeffdegree(self,degree): 
+        for term in self.termpairs: 
+            if term[1]  ==  degree : 
+                return term[0] 
+        return 0 
+
 
 
 
