@@ -6,17 +6,6 @@ class poly:
         self.exponets = []
         self.coeffs =self.getcoefflistfromtermlist(self.termpairs)
 
-        
-    
-
-        
-
-
-        
-
-        print("coeffs list is ")
-        print (self.coeffs)
-
             
         
     def getmaxexponent(self,*termpairs): 
@@ -40,11 +29,27 @@ class poly:
 
 
     def __str__(self):
-        return str (self.termpairs)+ str(self.coeffs)
+        size = len(self.coeffs)
+
+        index = size - 1 
+        expression = ''
+
+        while index>=0:
+            if(self.coeffs[index]<0):
+                expression =  expression + ' - '
+            elif (self.coeffs[index]>0 and index != size - 1):
+                expression = expression + ' + '
+
+            expression = expression + self.getstringterm(self.coeffs[index], index)
+            index-=1
+      
+        return expression
     
     def getstringterm(self,coeff,exponet): 
-        if coeff !=  0 and exponet != 0 :
-            return str(coeff) + 'x'+ '^' + str(exponet ) 
+        if coeff >  0 and exponet != 0 :
+            return  str(coeff) + 'x'+ '^' + str(exponet ) 
+        if coeff < 0 and exponet != 0:
+            return  str(-1*coeff) + 'x'+ '^' + str(exponet ) 
         elif coeff!= 0 and exponet == 0: 
             return str(coeff)
         

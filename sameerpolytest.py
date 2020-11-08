@@ -3,8 +3,7 @@
 from poly import *
 
 if __name__ == "__main__":
-    print("hello")
-    P = poly((2,8),(9,4),(4,15))
+    P = poly((-7,8),(9,4),(-9,15))
 
     
     print(P.getstringterm(4,0))
@@ -13,6 +12,8 @@ if __name__ == "__main__":
     print(P.getstringterm(0,3))
     result = P.multiplyterms(4,2,3,5)
     print(P.getstringterm(result[0],result[1]))
+    print('Print of poly')
+    print (P)
 
 
 
