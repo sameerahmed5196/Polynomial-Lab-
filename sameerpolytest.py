@@ -14,10 +14,13 @@ if __name__ == "__main__":
     print(P.getstringterm(result[0],result[1]))
     print('Print of poly')
     print (P)
+    print(P.degree())
 
 
 
-
+P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+print (P)
+print(P.evaluate(2))
 
 
 

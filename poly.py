@@ -44,6 +44,8 @@ class poly:
             index-=1
       
         return expression
+    def __repr__(self): 
+        str(self)
     
     def getstringterm(self,coeff,exponet): 
         if coeff >  0 and exponet != 0 :
@@ -79,6 +81,29 @@ class poly:
             if term[1]  ==  degree : 
                 return term[0] 
         return 0 
+
+    def degree(self):
+        return len(self.coeffs )- 1
+    
+    def evaluateterm(self,x,coeff,exponent):
+        return coeff * pow(x,exponent)
+
+    def evaluate(self,x): 
+        
+        result = 0 
+        exponent = 0
+
+        for coeff in self.coeffs: 
+            
+            result += self.evaluateterm(x, coeff, exponent)
+            exponent +=1
+        
+        return result 
+
+        
+
+
+
 
 
 
