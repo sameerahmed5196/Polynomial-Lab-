@@ -50,3 +50,23 @@ print ('after deleting middle term')
 P.removeterm(4)
 print (P)
 
+
+
+output = P.scale(2)
+print(output)
+
+P1 = poly((4,0),(10,2),(-4,3),(6,5))
+P2  = poly((8,1),(-3,2),(-5,7),(3,9))
+
+print(P1) 
+print(P2)
+P3 = P1 + P2 
+print(P3)
+print(P1-P2) 
+
+P1 = poly((1,4),(4,3),(4,2))
+P2 = poly((2,1),(-1,0))
+print("results")
+print(P1)
+print(P2)
+print (P1 * P2 )

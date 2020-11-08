@@ -70,7 +70,7 @@ class poly:
         else: 
             return False 
 
-    def scale (self,coeff,scale): 
+    def scaleold (self,coeff,scale): 
         coeff = coeff * scale 
     
     def subcoeffs (self,coeff1,coeff2): 
@@ -119,18 +119,58 @@ class poly:
         if exp >= len(self.coeffs) or exp < 0 : 
             return 
         elif exp == len(self.coeffs)-1:
-            print ('here')
             del self.coeffs[exp]
         else:
-            self.coeffs[exp] =0 
+            self.coeffs[exp] = 0 
         
             
+    def scale (self,s):
+        degree = 0 
+        newterms = []
+        for x in self.coeffs: 
+            x = x * s 
+            newterms.append((x, degree))
+            degree += 1
+        
+        
+        
+        newpolynomial = poly((*newterms))
+        return newpolynomial
 
+    def __add__(self,other): 
+        newpoly = self.scale(1)
+        degree = 0 
+        for coefficent in other.coeffs: 
+            newpoly.addterm(coefficent, degree)
+            degree += 1 
+
+        return newpoly   
+
+    def __sub__(self,other): 
+        newpoly = self.scale(1)
+        degree = 0 
+        for coefficent in other.coeffs: 
+            newpoly.addterm (-1 *coefficent , degree)
+            degree += 1 
+
+        return newpoly  
+
+    def __mul__(self,other): 
+        result = poly((0,0))
+        exp = 0 
+        selfexp = 0
+        otherexp  = 0
+        for x in other.coeffs:
+            selfexp = 0
+            for y in self.coeffs: 
+                result.addterm(x * y, selfexp + otherexp) 
+               # print (result)
+                print(str(x*y) + 'x^' + str(selfexp + otherexp))
+                selfexp +=1
+            otherexp +=1
         
 
-
-
-
+        return result 
 
 
         
