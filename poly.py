@@ -164,14 +164,35 @@ class poly:
             selfexp = 0
             for y in self.coeffs: 
                 result.addterm(x * y, selfexp + otherexp) 
-               # print (result)
-                print(str(x*y) + 'x^' + str(selfexp + otherexp))
                 selfexp +=1
             otherexp +=1
         
 
         return result 
 
+
+def read_polynomial(fileName):
+    f = open(fileName, "r")
+    
+    line = f.readline()
+
+    termsArray = []
+
+    while(line!=''):
+     parseLine = line.split()
+    
+     if(len(parseLine)>1):
+         termsArray.append((int(parseLine[0]), int(parseLine[1])))
+
+     line = f.readline()
+    
+     
+    result = poly((*termsArray))
+
+    return result
+
+def arith_ops_polys(P1, P2):
+ print ('tbd')
 
         
          

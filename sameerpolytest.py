@@ -70,3 +70,20 @@ print("results")
 print(P1)
 print(P2)
 print (P1 * P2 )
+
+polyFromFile = read_polynomial('poly1.txt')
+print(polyFromFile)
+polyFromFile = read_polynomial('poly2.txt')
+print(polyFromFile)
+
+
+
+
+
+
+
+
+
+
+
+
