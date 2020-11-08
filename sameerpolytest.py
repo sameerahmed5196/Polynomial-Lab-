@@ -34,13 +34,19 @@ print(P)
 
 
 P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+print('after deleten lowest term')
 P.addterm(9,0)
 print(P)
 
-
 P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+print ('after deleting highest term')
 P.removeterm(6)
 print (P)
 
+P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+print ('before ')
+print (P)
+print ('after deleting middle term')
+P.removeterm(4)
+print (P)
 
-print(P)

@@ -118,8 +118,9 @@ class poly:
     def removeterm(self,exp):
         if exp >= len(self.coeffs) or exp < 0 : 
             return 
-        elif exp == len(self.coeffs)-1
-            self.coeffs.remove(exp)
+        elif exp == len(self.coeffs)-1:
+            print ('here')
+            del self.coeffs[exp]
         else:
             self.coeffs[exp] =0 
         
