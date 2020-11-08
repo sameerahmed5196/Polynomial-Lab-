@@ -3,7 +3,7 @@
 from poly import *
 
 if __name__ == "__main__":
-    P = poly((-7,8),(9,4),(-9,15))
+    P = Polynomial((-7,8),(9,4),(-9,15))
 
     
     print(P.getstringterm(4,0))
@@ -18,14 +18,14 @@ if __name__ == "__main__":
 
 
 
-P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P = Polynomial((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
 print (P)
 print(P.evaluate(2))
 
 
 
 
-P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P = Polynomial((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
 print(P)
 P.addterm(5,5)
 print(P)
@@ -33,17 +33,17 @@ P.addterm(5, 20)
 print(P)
 
 
-P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P = Polynomial((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
 print('after deleten lowest term')
 P.addterm(9,0)
 print(P)
 
-P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P = Polynomial((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
 print ('after deleting highest term')
 P.removeterm(6)
 print (P)
 
-P = poly((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
+P = Polynomial((-12,6), (5, 5), (-20, 4), (8, 2), (-12, 1), (9, 0))
 print ('before ')
 print (P)
 print ('after deleting middle term')
@@ -55,8 +55,8 @@ print (P)
 output = P.scale(2)
 print(output)
 
-P1 = poly((4,0),(10,2),(-4,3),(6,5))
-P2  = poly((8,1),(-3,2),(-5,7),(3,9))
+P1 = Polynomial((4,0),(10,2),(-4,3),(6,5))
+P2  = Polynomial((8,1),(-3,2),(-5,7),(3,9))
 
 print(P1) 
 print(P2)
@@ -64,8 +64,8 @@ P3 = P1 + P2
 print(P3)
 print(P1-P2) 
 
-P1 = poly((1,4),(4,3),(4,2))
-P2 = poly((2,1),(-1,0))
+P1 = Polynomial((1,4),(4,3),(4,2))
+P2 = Polynomial((2,1),(-1,0))
 print("results")
 print(P1)
 print(P2)

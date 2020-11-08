@@ -1,4 +1,4 @@
-class poly: 
+class Polynomial: 
 
     def __init__(self,*termpairs):
 
@@ -134,7 +134,7 @@ class poly:
         
         
         
-        newpolynomial = poly((*newterms))
+        newpolynomial = Polynomial((*newterms))
         return newpolynomial
 
     def __add__(self,other): 
@@ -156,7 +156,7 @@ class poly:
         return newpoly  
 
     def __mul__(self,other): 
-        result = poly((0,0))
+        result = Polynomial((0,0))
         exp = 0 
         selfexp = 0
         otherexp  = 0
@@ -187,7 +187,7 @@ def read_polynomial(fileName):
      line = f.readline()
     
      
-    result = poly((*termsArray))
+    result = Polynomial((*termsArray))
 
     return result
 
