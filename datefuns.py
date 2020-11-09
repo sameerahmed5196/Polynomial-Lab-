@@ -1,3 +1,11 @@
+"""
+Module for Homework 4, Problem 2
+Author: Sameer Ahmed 
+Object-Oriented Programming (50:198:113), Fall 2020
+
+
+"""
+
 from date import Date
 
 def weekend_dates(m,y):
