@@ -231,6 +231,7 @@ def __getitem__(self,idx):
      
 
 def __setitem__(self,idx,value):
+    size = len(self.coeffs) - 1
     if idx >= 0 and idx <= (size) - 1:
         self.coeffs[idx] = value
     else: 
