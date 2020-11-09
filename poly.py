@@ -221,14 +221,22 @@ def arith_ops_polys(P,Q):
     print ("The product of P and Q is {}".format(P*Q))
 
 def __getitem__(self,idx): 
-    return self.coeffs[idx]
+     size = len(self.coeffs)
+     if idx >= 0 and idx <= (size) - 1:
+         return self.coeffs[idx]
+     else:
+         return 0  
+
+
      
 
-def __setitem__(self,idx,value): 
-    if self.coeffs[idx] != 0: 
-        self.coeffs[idx] = value 
+def __setitem__(self,idx,value):
+    if idx >= 0 and idx <= (size) - 1:
+        self.coeffs[idx] = value
     else: 
-        self.coeffs[idx] = value 
+        self.coeffs.addterm(value,idx )
+
+
 
 
 

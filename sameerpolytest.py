@@ -79,5 +79,5 @@ print(polyFromFile)
 x = arith_ops_polys(Polynomial((4,0),(10,2),(-4,3),(6,5)),Polynomial((8,1),(-3,2),(-5,7),(3,9)))
 print(x)
 P = Polynomial((6,5),(1,1),(3,4),(9,8))
-P[]
+R = P[3]
 print(R)
