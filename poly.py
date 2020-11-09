@@ -1,3 +1,20 @@
+''' Sameer Ahmed
+    RUID = 202001556
+    problem 3 hw 4 
+
+
+    This class performs multiple tasks in regards to polynomials
+    1. create a polynomial object 
+    2. perform arithmetic on  polynomial objects 
+    3.read and create polynomial objects from a file
+    4. scale  a polynomial 
+    5. add or remove a term from a polynomial 
+'''
+
+
+
+
+
 class Polynomial: 
 
     def __init__(self,*termpairs):
@@ -137,6 +154,7 @@ class Polynomial:
         newpolynomial = Polynomial((*newterms))
         return newpolynomial
 
+# other is a polynomial object
     def __add__(self,other): 
         newpoly = self.scale(1)
         degree = 0 
@@ -145,6 +163,7 @@ class Polynomial:
             degree += 1 
 
         return newpoly   
+# other is a polynomial object
 
     def __sub__(self,other): 
         newpoly = self.scale(1)
@@ -154,6 +173,7 @@ class Polynomial:
             degree += 1 
 
         return newpoly  
+# other is a polynomial object
 
     def __mul__(self,other): 
         result = Polynomial((0,0))
@@ -188,11 +208,35 @@ def read_polynomial(fileName):
     
      
     result = Polynomial((*termsArray))
+    
+
 
     return result
 
-def arith_ops_polys(P1, P2):
- print ('tbd')
+def arith_ops_polys(P,Q):
+    print("The degree of P is {}".format(P.degree()))
+    print("The degree of Q is {}".format(Q.degree()))
+    print("The sum of P and Q is {}".format(P+Q))
+    print("The diffrence of P and Q is {}".format(P-Q))
+    print ("The product of P and Q is {}".format(P*Q))
+
+def __getitem__(self,idx): 
+    return self.coeffs[idx]
+     
+
+def __setitem__(self,idx,value): 
+    if self.coeffs[idx] != 0: 
+        self.coeffs[idx] = value 
+    else: 
+        self.coeffs[idx] = value 
+
+
+
+
+
+
+    
+ 
 
         
          

@@ -2,7 +2,6 @@
 Object Oriented Programming, Fall 2020
 Test module for Problem 3, Assignment #4
 """
-
 from poly import *
 
 
